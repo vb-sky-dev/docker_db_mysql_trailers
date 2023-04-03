@@ -25,7 +25,7 @@ This repository contains the files for setting up a movie database using MySQL, 
 docker-compose up -d
 
 
-4. Access phpMyAdmin at `http://localhost:8080` in your web browser. Use the following credentials to log in:
+4. Access phpMyAdmin at `http://localhost:8000` in your web browser. Use the following credentials to log in:
 - Username: `root`
 - Password: `root`
 
@@ -85,14 +85,14 @@ The tables are related through foreign key constraints:
 In the movie database schema, there are several relationships between the tables:
 
 One-to-Many relationships:
-1. user_management to movie_views: One user can have many movie views, but each movie view is associated with only one user.
-2. user_management to movie_likes_dislikes: One user can like/dislike many movies, but each like/dislike is associated with only one user.
-3. user_management to movie_recommendations: One user can have many movie recommendations, but each recommendation is associated with only one user.
-4. user_management to movie_reviews: One user can write many movie reviews, but each review is associated with only one user.
-5. move_management to movie_views: One movie can be viewed by many users, but each movie view is associated with only one movie.
-6. move_management to movie_likes_dislikes: One movie can be liked/disliked by many users, but each like/dislike is associated with only one movie.
-7. move_management to movie_recommendations: One movie can be recommended to many users, but each recommendation is associated with only one movie.
-8. move_management to movie_reviews: One movie can have many reviews, but each review is associated with only one movie.
+1. `user_management` to `movie_views`: One user can have many movie views, but each movie view is associated with only one user.
+2. `user_management` to `movie_likes_dislikes`: One user can like/dislike many movies, but each like/dislike is associated with only one user.
+3. `user_management` to `movie_recommendations`: One user can have many movie recommendations, but each recommendation is associated with only one user.
+4. `user_management` to `movie_reviews`: One user can write many movie reviews, but each review is associated with only one user.
+5. `move_management` to `movie_views`: One movie can be viewed by many users, but each movie view is associated with only one movie.
+6. `move_management` to `movie_likes_dislikes`: One movie can be liked/disliked by many users, but each like/dislike is associated with only one movie.
+7. `move_management` to `movie_recommendations`: One movie can be recommended to many users, but each recommendation is associated with only one movie.
+8. `move_management` to `movie_reviews`: One movie can have many reviews, but each review is associated with only one movie.
 
 Many-to-Many relationships:
 There are no direct many-to-many relationships in this schema. However, the relationship between user_management and move_management can be considered many-to-many through the use of intermediary tables (movie_views, movie_likes_dislikes, movie_recommendations, and movie_reviews). A user can view, like, dislike, or review many movies, and a movie can be viewed, liked, disliked, or reviewed by many users.
