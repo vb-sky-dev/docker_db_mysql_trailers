@@ -4,13 +4,11 @@ This repository contains the files for setting up a movie database using MySQL, 
 
 ## Project structure
 
-project
-├── docker-compose.yml
-└── docker-entrypoint-initdb.d
-    ├── schema.sql
-    └── data.sql
-
-
+    project
+    ├── docker-compose.yml
+    └── docker-entrypoint-initdb.d
+        ├── schema.sql
+        └── data.sql
 
 ## Files
 
