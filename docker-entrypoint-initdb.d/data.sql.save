@@ -1,0 +1,47 @@
+INSERT INTO user_management (user_name, name, lastname, email, phone, country, users_language)
+VALUES ('jdoe', 'John', 'Doe', 'jdoe@example.com', '+1234567890', 'USA', 'English');
+
+
+INSERT INTO move_management (title, authors, year, rating, cast_list, image_main, image_search, trailer_link, watch_legal_resources)
+VALUES ('Movie Title', 'Author Name', 2022, 8.7, 'Actor 1, Actor 2, Actor 3', 'image_main.jpg', 'image_search.jpg', 'https://trailer.example.com', 'https://watch.example.com');
+-- Добавление данных в таблицу user_management
+INSERT INTO user_management (user_name, name, lastname, email, phone, country, users_language) VALUES ('jdoe', 'John', 'Doe', 'jdoe@example.com', '+1234567890', 'USA', 'English');
+
+-- Добавление данных в таблицу move_management
+INSERT INTO move_management (title, authors, year, rating, cast_list, image_main, image_search, trailer_link, watch_legal_resources) VALUES ('Movie Title', 'Author Name', 2022, 8.7, 'Actor 1, Actor 2, Actor 3', 'image_main.jpg', 'image_search.jpg', 'https://trailer.example.com', 'https://watch.example.com');
+
+-- Добавление данных в таблицу movie_views
+INSERT INTO movie_views (user_id, movie_id) VALUES (1, 1);
+
+-- Добавление данных в таблицу movie_likes_dislikes
+INSERT INTO movie_likes_dislikes (user_id, movie_id, rating) VALUES (1, 1, 1); -- Like
+INSERT INTO movie_likes_dislikes (user_id, movie_id, rating) VALUES (1, 2, -1); -- Dislike
+INSERT INTO movie_likes_dislikes (user_id, movie_id, rating) VALUES (1, 3, 0); -- Not rated
+
+-- Добавление данных в таблицу movie_recommendations
+INSERT INTO movie_recommendations (user_id, movie_id) VALUES (1, 1);
+
+-- Добавление данных в таблицу movie_reviews
+INSERT INTO movie_reviews (user_id, movie_id, review_text) VALUES (1, 1, 'Great movie! I really enjoyed watching it.');
+
+
+INSERT INTO movie_views (user_id, movie_id)
+VALUES (1, 1);
+
+
+INSERT INTO movie_likes_dislikes (user_id, movie_id, rating)
+VALUES(1, 1, 1); -- Like
+
+INSERT INTO movie_likes_dislikes (user_id, movie_id, rating)
+VALUES (1, 2, -1); -- Dislike
+
+INSERT INTO movie_likes_dislikes (user_id, movie_id, rating)
+VALUES (1, 3, 0); -- Not rated
+
+
+INSERT INTO movie_recommendations (user_id, movie_id)
+VALUES (1, 1);
+
+
+INSERT INTO movie_reviews (user_id, movie_id, review_text)
+VALUES (1, 1, 'Great movie! I really enjoyed watching it.');
